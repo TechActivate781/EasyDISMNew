@@ -18,4 +18,4 @@ Version 0.9 should add support for Windows 7/8 (as well as support for capturing
 After the GUI version is released, CLI builds will still be offered, but they will only be released when a new feature is added.
 
 # Older versions
-This application is based on an older version of the application that I made prior to this repository - I had to remake the repository as I began using the GitHub extension in Visual Studio. [You can see it here]([url](https://github.com/TechActivate781/EasyDISMOld)).
+This application is based on an older version of the application that I made prior to this repository - I had to remake the repository as I began using the GitHub extension in Visual Studio. [You can see it here](https://github.com/TechActivate781/EasyDISMOld).
