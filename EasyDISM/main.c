@@ -23,6 +23,7 @@ int main() {
 
 	do{
 		scanf(" %c", &choice);
+		getchar(); // to remove the space
 
 		if (choice == 'i') {
 			choice = 'I';
@@ -44,5 +45,7 @@ int main() {
 		}
 
 	} while (choice != 'I' || choice != 'A');
+
+	GetImageInfoModern();
 
 }
