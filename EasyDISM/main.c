@@ -46,6 +46,7 @@ int main() {
 
 	} while (choice != 'I' || choice != 'A');
 
-	GetImageInfoModern();
+	int LatestErorrCode = GetImageInfoModern();
 
+	
 }

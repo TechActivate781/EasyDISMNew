@@ -10,10 +10,12 @@ int GetImageInfoModern() {
 
 	printf("What is the path to the image?\n");
 	fgets(path, 200, stdin);
+	path[strlen(path) - 1] = '\0'; // removing the last space
 
-	sprintf(path, "\"%s\" ", path);
+	sprintf(command, "dism /get-imageinfo /imagefile:\"%s\" ", path);
 
-	sprintf(command, "dism /get-imageinfo /imagefile:%s", path);
-
-	return system(command);
+	system("cls");
+	int error = system(command);
+	system("pause");
+	return error;
 }
