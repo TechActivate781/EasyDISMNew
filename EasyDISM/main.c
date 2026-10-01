@@ -5,11 +5,13 @@
 #include <versionhelpers.h>
 #include <stdlib.h>
 #include <string.h>
-#include "GetImageInfo\modern.c"
+#include "commands.c"
+#include "WIMLIB/wimlib.h"
+// it's weird to have this here, but for some reason VS didn't want to get the header file to work otherwise.
 
 int main() {
 	int ModernWin;
-	char choice;
+	char Choice;
 
 	if (IsWindows8Point1OrGreater() == 1) {
 		ModernWin = 1;
@@ -22,31 +24,31 @@ int main() {
 	printf("===EasyDISM===\n=== Type I to get information about an image ===\n=== Type A to apply an image ===\n");
 
 	do{
-		scanf(" %c", &choice);
+		scanf(" %c", &Choice);
 		getchar(); // to remove the space
 
-		if (choice == 'i') {
-			choice = 'I';
+		if (Choice == 'i') {
+			Choice = 'I';
 			break;
 		}
 
-		else if (choice == 'a') {
-			choice = 'A';
+		else if (Choice == 'a') {
+			Choice = 'A';
 			break;
 		}
 
-		else if (choice == 'A' || choice == 'I') {
+		else if (Choice == 'A' || Choice == 'I') {
 			break;
 		}
 
-		if(choice != 'A' || choice != 'I') {
+		if(Choice != 'A' && Choice != 'I') {
 			printf("You did not enter a correct letter - please try again\n");
 			continue;
 		}
 
-	} while (choice != 'I' || choice != 'A');
+	} while (Choice != 'I' && Choice != 'A');
 
-	int LatestErorrCode = GetImageInfoModern();
+	// int LatestErorrCode = GetImageInfoModern();
 
 	
 }

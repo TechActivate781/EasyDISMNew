@@ -19,3 +19,6 @@ After the GUI version is released, CLI builds will still be offered, but they wi
 
 # Older versions
 This application is based on an older version of the application that I made prior to this repository - I had to remake the repository as I began using the GitHub extension in Visual Studio. [You can see it here](https://github.com/TechActivate781/EasyDISMOld).
+
+# Credits
+This application makes use of the [wimlib library](https://wimlib.net/). It is licensed under the GNU GPLv3 license.
